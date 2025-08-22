@@ -225,3 +225,60 @@ body {
         padding: 1rem;
     }
 }
+.hero-buttons button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.login-button {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.login-button:hover {
+  background-color: #e5e7eb;
+}
+
+.register-button {
+  background-color: #0066cc;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #004499;
+}
+.header-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.header-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.login-button {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.login-button:hover {
+  background-color: #e5e7eb;
+}
+
+.register-button {
+  background-color: #0066cc;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #004499;
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./Feedback.css";
 
 export default function Home() {
   const [department, setDepartment] = useState("");
@@ -60,7 +60,7 @@ export default function Home() {
       <main className="homeMainContent">
         {/* Instructions */}
         <div className="form-instructions minimalist">
-          <div className="instructions-title">📝 Feedback Guide</div>
+          <div className="instructions-title">Feedback Guide</div>
           <div className="instructions-steps">
             <div className="step"><strong>1.</strong> Choose your <strong>Department</strong>, <strong>Doctor</strong>, and <strong>Treatment</strong>.</div>
             <div className="step"><strong>2.</strong> Rate each question using the emoji scale from 😞 to 🤩.</div>

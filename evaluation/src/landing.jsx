@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ use navigate
+import { useNavigate } from "react-router-dom";
 import "./landing.css";
 
 export default function Landing() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Load saved theme from localStorage
     const savedTheme = localStorage.getItem("hospitalTheme") || "light";
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, []);
 
   return (
     <div className="container">
+      {/* Header */}
       <header className="header">
         <div className="header-content">
           <div className="logo">
@@ -33,13 +33,21 @@ export default function Landing() {
             <span className="logo-text">HealthCare Feedback</span>
           </div>
 
-          {/* ✅ Admin link can also use navigate later */}
-          <button className="admin-link" onClick={() => navigate("/admin")}>
-            Admin Login
-          </button>
+          {/* Right-side buttons */}
+          <div className="header-buttons">
+            <button className="admin-link" onClick={() => navigate("/admin")}>
+              Admin Login
+            </button>
+        <button className="login-button" onClick={() => navigate("/login")}>
+  Login
+</button>
+
+
+          </div>
         </div>
       </header>
 
+      {/* Main Content */}
       <main className="main-content">
         <div className="hero-section">
           <div className="hero-icon">
@@ -63,7 +71,7 @@ export default function Landing() {
             your experience with us.
           </p>
 
-          {/* ✅ Now routes to Home.jsx */}
+          {/* Start Feedback Button */}
           <button className="start-button" onClick={() => navigate("/home")}>
             <span>Start Feedback</span>
             <svg
@@ -83,6 +91,7 @@ export default function Landing() {
             </svg>
           </button>
 
+          {/* Features */}
           <div className="features">
             <div className="feature">
               <svg
@@ -125,6 +134,7 @@ export default function Landing() {
         </div>
       </main>
 
+      {/* Footer */}
       <footer className="footer">
         <p>
           &copy; 2025 HealthCare Feedback. Your privacy and security are our
