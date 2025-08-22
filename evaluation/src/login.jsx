@@ -67,15 +67,19 @@ export default function Login() {
 
       <main className="login-main-content">
         <div className="login-form-section">
-          <div className="login-hero-icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M12.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" fill="currentColor"/>
-            </svg>
-          </div>
+       <div className="login-hero-icon">
+  <svg width="64" height="64">
+
+    <circle cx="32" cy="16" r="10" fill="#4A90E2" />
+
+    <rect x="22" y="26" width="20" height="24" fill="#4A90E2" rx="4" />
+  </svg>
+</div>
+
 
           <h1 className="login-title">Welcome Back</h1>
           <p className="login-subtitle">
-            Sign in to your account to access the admin dashboard and manage feedback.
+            
           </p>
 
           <form onSubmit={handleSubmit} className="login-form">
