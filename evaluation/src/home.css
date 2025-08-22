@@ -1,0 +1,365 @@
+/* Feedback Form Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.homeBody {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #f9fafb;
+    min-height: 100vh;
+}
+
+.homeContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.homeHeader {
+    background: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.homeHeaderContent {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.homeBackButton {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.homeBackButton:hover {
+    background: #f3f4f6;
+    color: #0066cc;
+}
+
+.homeHeaderTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    flex: 1;
+    text-align: center;
+}
+
+/* Progress Bar */
+.homeProgressContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.homeProgressBar {
+    width: 120px;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.homeProgressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #0066cc 0%, #004499 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.homeProgressText {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+/* Main Content */
+.homeMainContent {
+    flex: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+.homeFeedbackForm {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.homeFormSection {
+    margin-bottom: 2rem;
+}
+
+.homeFormLabel {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.homeFormSelect {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.homeFormSelect:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.homeFormTextarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.2s ease;
+}
+
+.homeFormTextarea:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.homeCharacterCount {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.homeCharacterCountWarning {
+    color: #f59e0b;
+}
+
+.homeCharacterCountError {
+    color: #dc2626;
+}
+
+/* Questions Section */
+.homeQuestionsSection {
+    margin-bottom: 2rem;
+}
+
+.homeQuestionItem {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: homeSlideIn 0.5s ease forwards;
+}
+
+.homeQuestionItem:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.homeQuestionItem:nth-child(1) { animation-delay: 0.1s; }
+.homeQuestionItem:nth-child(2) { animation-delay: 0.2s; }
+.homeQuestionItem:nth-child(3) { animation-delay: 0.3s; }
+.homeQuestionItem:nth-child(4) { animation-delay: 0.4s; }
+.homeQuestionItem:nth-child(5) { animation-delay: 0.5s; }
+
+.homeQuestionText {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.homeRatingOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.homeRatingButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+    position: relative;
+    font-size: 2.5rem;
+}
+
+.homeRatingButton:hover {
+    background: #f3f4f6;
+    transform: scale(1.1);
+}
+
+.homeRatingButtonSelected {
+    background: #dbeafe;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 102, 204, 0.2);
+}
+
+.homeRatingTooltip {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f2937;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.homeRatingButton:hover .homeRatingTooltip {
+    opacity: 1;
+}
+
+/* Form Actions */
+.homeFormActions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.homeSaveDraftButton {
+    background: #6b7280;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(107, 114, 128, 0.3);
+}
+
+.homeSaveDraftButton:hover:not(:disabled) {
+    background: #4b5563;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(107, 114, 128, 0.4);
+}
+
+.homeSubmitButton {
+    background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 102, 204, 0.3);
+}
+
+.homeSubmitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 102, 204, 0.4);
+}
+
+.homeSubmitButtonDisabled,
+.homeSaveDraftButtonDisabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.homeLoadingSpinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: homeSpin 1s linear infinite;
+}
+
+@keyframes homeSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* Modal */
+.homeModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.homeModalShow { display: flex; }
+
+.homeModalContent {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.homeSuccessIcon {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    color: #16a34a;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}

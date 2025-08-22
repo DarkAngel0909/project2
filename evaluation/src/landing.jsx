@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ use navigate
 import "./landing.css";
 
-
 export default function Landing() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Load saved theme from localStorage
     const savedTheme = localStorage.getItem("hospitalTheme") || "light";
@@ -30,10 +32,9 @@ export default function Landing() {
             </div>
             <span className="logo-text">HealthCare Feedback</span>
           </div>
-          <button
-            className="admin-link"
-            onClick={() => (window.location.href = "admin-login.html")}
-          >
+
+          {/* ✅ Admin link can also use navigate later */}
+          <button className="admin-link" onClick={() => navigate("/admin")}>
             Admin Login
           </button>
         </div>
@@ -62,10 +63,8 @@ export default function Landing() {
             your experience with us.
           </p>
 
-          <button
-            className="start-button"
-            onClick={() => (window.location.href = "feedback-form.html")}
-          >
+          {/* ✅ Now routes to Home.jsx */}
+          <button className="start-button" onClick={() => navigate("/home")}>
             <span>Start Feedback</span>
             <svg
               width="20"
@@ -103,6 +102,7 @@ export default function Landing() {
               </svg>
               <span>Anonymous</span>
             </div>
+
             <div className="feature">
               <svg
                 width="16"
