@@ -103,10 +103,8 @@ export default function Register() {
             onChange={handleInputChange}
           >
             <option value="">Select Role</option>
-            <option value="patient">Patient</option>
             <option value="doctor">Doctor</option>
             <option value="nurse">Nurse</option>
-            <option value="admin">Admin</option>
             <option value="staff">Staff</option>
           </select>
           {errors.role && <span className="error">{errors.role}</span>}
