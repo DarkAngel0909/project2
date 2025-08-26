@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./landing.jsx";
 import Login from "./login.jsx";
-
 import Home from "./Feedback.jsx";
+import Register from "./Register.jsx";
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
-      
+        <Route path="/register" element={<Register />} /> {/* <-- add this */}
         <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
