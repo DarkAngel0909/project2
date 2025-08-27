@@ -53,9 +53,7 @@ export default function Login() {
         <div className="login-header-content">
           <div className="login-logo">
             <div className="login-logo-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="currentColor"/>
-              </svg>
+          
             </div>
             <span className="login-logo-text">HealthCare Feedback</span>
           </div>
@@ -67,14 +65,6 @@ export default function Login() {
 
       <main className="login-main-content">
         <div className="login-form-section">
-       <div className="login-hero-icon">
-  <svg width="64" height="64">
-
-    <circle cx="32" cy="16" r="10" fill="#4A90E2" />
-
-    <rect x="22" y="26" width="20" height="24" fill="#4A90E2" rx="4" />
-  </svg>
-</div>
 
 
           <h1 className="login-title">Welcome Back</h1>

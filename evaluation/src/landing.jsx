@@ -20,9 +20,10 @@ export default function Landing() {
 
           {/* Right-side buttons */}
           <div className="header-buttons">
-            <button className="admin-link" onClick={() => navigate("/admin")}>
-              Admin Login
-            </button>
+          <button className="admin-link" onClick={() => navigate("/adminlogin")}>
+  Admin Login
+</button>
+
         <button className="login-button" onClick={() => navigate("/login")}>
   Login
 </button>
@@ -35,10 +36,7 @@ export default function Landing() {
       {/* Main Content */}
       <main className="main-content">
         <div className="hero-section">
-          <div className="hero-icon">
-      
-          </div>
-
+         
           <h1 className="hero-title">Help Us Improve</h1>
           <p className="hero-subtitle">
             Your feedback helps us provide better healthcare services. Share

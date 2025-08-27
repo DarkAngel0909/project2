@@ -68,9 +68,11 @@ export default function Register() {
       </header>
 
       <main className="register-main-content">
-        <h1>Create Account</h1>
+        
         <form onSubmit={handleSubmit} className="register-form">
+         <h1>Create Account</h1>
           <input
+          
             type="text"
             name="username"
             placeholder="Username"

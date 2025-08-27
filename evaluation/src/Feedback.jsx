@@ -74,7 +74,7 @@ export default function Feedback() {
     const totalSteps = questions.length + 1
     const completedSteps = (department ? 1 : 0) + ratingCount
     return Math.round((completedSteps / totalSteps) * 100)
-  }, [formData.department, formData.ratings, questions.length]) // Added questions.length to dependency array
+  }, [formData.department, formData.ratings, questions.length]) 
 
   // Check if form is valid for submission
   const isFormValid =

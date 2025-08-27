@@ -43,18 +43,6 @@ body {
     gap: 0.75rem;
 }
 
-.register-logo-icon {
-    background: #0066cc;
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease;
-}
-
 .register-logo-icon:hover {
     transform: scale(1.05);
 }

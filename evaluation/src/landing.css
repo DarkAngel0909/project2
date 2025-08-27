@@ -101,18 +101,7 @@ body {
     border: 1px solid #f1f5f9;
 }
 
-.hero-icon {
-    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-    color: #0066cc;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 2rem;
-    animation: pulse 2s infinite;
-}
+
 
 @keyframes pulse {
     0%, 100% {
